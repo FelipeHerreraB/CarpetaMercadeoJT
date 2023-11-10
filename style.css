@@ -11,18 +11,68 @@
     font-family: 'Roboto', sans-serif;
 }
 
-:root{
-    --bg-color: #ffffff;
-    --pr-color: #00D6CA;
-    --sc-color: #8BFFF7;
-    --br-color: #008E84;
-    --text-color: #000000;
-    --sr-color: #E7E0EC;
+  /* light */
+  :root{
+  --primary-light: #006a64;
+  --primary-container-light: #52faed;
+  --on-primary-light: #ffffff;
+  --on-primary-container-light: #00201e;
+  --secondary-light: #4a6360;
+  --on-secondary-light: #ffffff;
+  --secondary-container-light: #cce8e4;
+  --on-secondary-container-light: #051f1d;
+  --tertiary-light: #47617a;
+  --on-tertiary-light: #ffffff;
+  --tertiary-container-light: #cfe5ff;
+  --on-tertiary-container-light: #001d33;
+  --background-light: #fafdfb;
+  --on-background-light: #191c1c;
+  --surface-light: #fafdfb;
+  --on-surface-light: #191c1c;
+  --surface-variant-light: #dae5e2;
+  --on-surface-variant-light: #3f4947;
+  --outline-light: #6f7977;
+  --surface-tint-light: #006a64;
+  --outline-variant-light: #bec9c6;
+  --scrim-light: #000000;
+  /* dark */
+  --primary-dark: #1fddd1;
+  --on-primary-dark: #003733;
+  --primary-container-dark: #00504b;
+  --on-primary-container-dark: #52faed;
+  --secondary-dark: #b0ccc8;
+  --on-secondary-dark: #1c3532;
+  --secondary-container-dark: #324b49;
+  --on-secondary-container-dark: #cce8e4;
+  --tertiary-dark: #afc9e7;
+  --on-tertiary-dark: #18324a;
+  --tertiary-container-dark: #304962;
+  --on-tertiary-container-dark: #cfe5ff;
+  --background-dark: #191c1c;
+  --on-background-dark: #e0e3e2;
+  --surface-dark: #191c1c;
+  --on-surface-dark: #e0e3e2;
+  --surface-variant-dark: #3f4947;
+  --on-surface-variant-dark: #bec9c6;
+  --outline-dark: #899391;
+  --surface-tint-dark: #1fddd1;
+  --outline-variant-dark: #3f4947;
+  --scrim-dark: #000000;
+}
+
+.dark-mode{
+    --secondary-container-light: #324b49;
+    --primary-light: #1fddd1;
+    --surface-variant-light: #3f4947;
+    --on-surface-variant-light: #bec9c6;
+    --on-secondary-container-light: #cce8e4;
+    --primary-container-light: #00504b;
+    --on-primary-container-light: #52faed;
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--background-light);
+    color: var(--on-background-light);
 }
 .menu{
     position: fixed;
@@ -34,8 +84,8 @@ body {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-    background-color: var(--br-color);
-    color: var(--bg-color);
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
     right: 15px;
     top: 65px;
     z-index: 100;
@@ -50,7 +100,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--sc-color);
+    background-color: var(--primary-light);
     z-index: 100;
 }
 
@@ -62,6 +112,7 @@ body {
 
 .logo p{
     font-size: 1.2rem;
+    color: var(--on-primary-light);
 }
 
 .logo img{
@@ -71,13 +122,13 @@ body {
 
 .header a{
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: var(--on-primary-light);
     font-weight: 500;
     transition: .3s;
 }
 
 .header a:hover{
-    color: var(--pr-color);
+    color: var(--on-primary-container-dark);
 }
 
 .nav-lateral{
@@ -88,9 +139,9 @@ body {
     height: 100%;
     overflow: hidden;
     padding: 20px 15px;
-    background-color: var(--sr-color);
+    background-color: var(--secondary-container-light);
     top: 60px;
-    transition: width .5s ease,left .5s ease;
+    transition: width .5s ease,left .5s ease,background-color .3s ease;
 }
 
 .mini-nav-lateral{
@@ -115,15 +166,20 @@ body {
 .nav-lateral .titulo-nav{
     width: 100%;
     height: 45px;
+    color: var(--on-secondary-container-light);
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .nav-lateral .titulo-nav ion-icon{
     min-width: 50px;
     font-size: 40px;
     cursor: pointer;
+    transition: .3s;
+}
+.nav-lateral .titulo-nav ion-icon:hover{
+    color: var(--primary-light);
 }
 
 .nav-lateral .titulo-nav span{
@@ -149,12 +205,12 @@ body {
 }
 
 .nav-lateral::-webkit-scrollbar-thumb{
-    background-color: rgb(192, 192, 192);
+    background-color: var(--surface-variant-light);
     border-radius: 5px;
 }
 
 .nav-lateral::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(134, 134, 134);
+    background-color: var(--on-surface-variant-light);
     border-radius: 5px;
 }
 
@@ -173,17 +229,74 @@ body {
     display: flex;
     align-items: center;
     border-radius: 10px;
-    color: var(--text-color);
+    color: var(--on-secondary-container-light);
     transition: .3s;
 }
 
 .nav-lateral a:hover{
-    color: var(--pr-color);
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
 }
 
 .nav-lateral ion-icon{
     min-width: 50px;
     font-size: 25px;
+}
+
+/* modo oscuro */
+.nav-lateral .modo-oscuro{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-lateral .modo-oscuro .info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--on-secondary-container-light);
+}
+
+.nav-lateral .modo-oscuro ion-icon{
+    width: 50px;
+    font-size: 20px;
+}
+
+/* switch */
+.nav-lateral .modo-oscuro .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.nav-lateral .modo-oscuro .base{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-container-light);
+    width: 35px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.nav-lateral .modo-oscuro .circulo{
+    position: absolute;
+    background-color: var(--on-primary-container-light);
+    width: 18px;
+    height: 90%;
+    border-radius: 50px;
+    left: 2px;
+    transition: left .5s ease;
+}
+
+.nav-lateral .modo-oscuro .circulo.prendido{
+    left: 15px;
 }
 
 main{

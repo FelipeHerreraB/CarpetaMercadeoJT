@@ -1,8 +1,16 @@
 const carpet = document.getElementById("carpet");
 const barraLateral = document.querySelector(".nav-lateral");
 const spans = document.querySelectorAll("span");
+const palanca = document.querySelector(".switch");
+const circulo = document.querySelector(".circulo");
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main")
+
+palanca.addEventListener("click",()=>{
+    let body = document.body;
+    body.classList.toggle("dark-mode");
+    circulo.classList.toggle("prendido");
+});
 
 menu.addEventListener("click",()=>{
     barraLateral.classList.toggle("max-barra-lateral");
