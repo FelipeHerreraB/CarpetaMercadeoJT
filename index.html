@@ -6,9 +6,6 @@
     <title>Carpeta Mercadeo</title>
     <link rel="shortcut icon" href="images/jobtalent.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,21 +16,69 @@
         </div>
         <a href="#Gestores">Gestores</a>
     </header>
-    <aside>
-        <nav class="nav-lateral">
-            <ul>
-                <li><a href="#Funciones">Funciones</a></li>
-                <li><a href="#PresentacionPersonalMujer">Presentación personal mujer</a></li>
-                <li><a href="#PresentacionPersonalHombre">Presetación personal hombre</a></li>
-                <li><a href="#PresentacionPDV">Presentación PDV</a></li>
-                <li><a href="#Mandamientos">Mandamientos de la ejecución</a></li>
-                <li><a href="#PasoAPaso">Paso a paso en PDV</a></li>
-                <li><a href="#PoderL">Poder L</a></li>
-                <li><a href="#Semilleros">Semilleros en ejecición</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <main>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <nav class="nav-lateral">
+        <div>
+            <div class="titulo-nav">
+                <ion-icon id="carpet" name="folder-outline"></ion-icon>
+                <span>Carpeta</span>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#Funciones">
+                    <ion-icon name="documents-outline"></ion-icon>
+                    <span>Funciones</span>
+                </a>
+            </li>
+            <li>
+                <a href="#PresentacionPersonalMujer">
+                    <ion-icon name="woman-outline"></ion-icon>
+                    <span>Presentación personal Mujer</span>
+                </a>
+            </li>
+            <li>
+                <a href="#PresentacionPersonalHombre">
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Presentación personal Hombre</span>
+                </a>
+            </li>
+            <li>
+                <a href="#PresentacionPDV">
+                    <ion-icon name="storefront-outline"></ion-icon>
+                    <span>Presentación PDV</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Mandamientos">
+                    <ion-icon name="list-outline"></ion-icon>
+                    <span>Mandamientos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#PasoAPaso">
+                    <ion-icon name="footsteps-outline"></ion-icon>
+                    <span>Paso a paso</span>
+                </a>
+            </li>
+            <li>
+                <a href="#PoderL">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span>Poder L</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Semilleros">
+                    <ion-icon name="leaf-outline"></ion-icon>
+                    <span>Semilleros</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="principal">
         <h1>Carpeta Gestores De Mercadeo</h1>
         <p>Esta es la carpeta de mercadeo para los Gestores, 
             donde encontrarás toda la información acerca de tu labor en punto de venta.
@@ -82,7 +127,7 @@
         </table>
         <img src="images/robotdog.png" alt="mascota job">
     
-    <section class="funciones">
+    <section class="funciones" id="Funciones">
         <h2>Funciones</h2>
         <ol>
             <li>Cumplir con la programación de ruta.</li>
@@ -124,6 +169,9 @@
     </section>
 
     </main>
-    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
