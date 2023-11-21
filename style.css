@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 *{
     margin: 0;
@@ -35,39 +35,31 @@
   --surface-tint-light: #006a64;
   --outline-variant-light: #bec9c6;
   --scrim-light: #000000;
-  /* dark */
-  --primary-dark: #1fddd1;
-  --on-primary-dark: #003733;
-  --primary-container-dark: #00504b;
-  --on-primary-container-dark: #52faed;
-  --secondary-dark: #b0ccc8;
-  --on-secondary-dark: #1c3532;
-  --secondary-container-dark: #324b49;
-  --on-secondary-container-dark: #cce8e4;
-  --tertiary-dark: #afc9e7;
-  --on-tertiary-dark: #18324a;
-  --tertiary-container-dark: #304962;
-  --on-tertiary-container-dark: #cfe5ff;
-  --background-dark: #191c1c;
-  --on-background-dark: #e0e3e2;
-  --surface-dark: #191c1c;
-  --on-surface-dark: #e0e3e2;
-  --surface-variant-dark: #3f4947;
-  --on-surface-variant-dark: #bec9c6;
-  --outline-dark: #899391;
-  --surface-tint-dark: #1fddd1;
-  --outline-variant-dark: #3f4947;
-  --scrim-dark: #000000;
 }
-
+/* .dark-mode */
 .dark-mode{
-    --secondary-container-light: #324b49;
     --primary-light: #1fddd1;
+    --primary-container-light: #00504b;
+    --on-primary-light: #003733;
+    --on-primary-container-light: #52faed;
+    --secondary-light: #b0ccc8;
+    --on-secondary-light: #1c3532;
+    --secondary-container-light: #324b49;
+    --on-secondary-container-light: #cce8e4;
+    --tertiary-light: #afc9e7;
+    --on-tertiary-light: #18324a;
+    --tertiary-container-light: #304962;
+    --on-tertiary-container-light: #cfe5ff;
+    --background-light: #191c1c;
+    --on-background-light: #e0e3e2;
+    --surface-light: #191c1c;
+    --on-surface-light: #e0e3e2;
     --surface-variant-light: #3f4947;
     --on-surface-variant-light: #bec9c6;
-    --on-secondary-container-light: #cce8e4;
-    --primary-container-light: #00504b;
-    --on-primary-container-light: #52faed;
+    --outline-light: #899391;
+    --surface-tint-light: #1fddd1;
+    --outline-variant-light: #3f4947;
+    --scrim-light: #000000;
 }
 
 body {
@@ -166,7 +158,7 @@ body {
 .nav-lateral .titulo-nav{
     width: 100%;
     height: 45px;
-    color: var(--on-secondary-container-light);
+    color: var(--primary-light);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -302,13 +294,180 @@ body {
 main{
     margin-top: 60px;
     margin-left: 250px;
-    padding: 20px;
+    /* padding: 20px; */
     transition: margin-left .5s ease;
 }
 main.min-main{
     margin-left: 80px;
 }
 
+/* diseño inicio */
+.principal{
+    /* background-image: url(images/supermercado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    padding: 70px 10px 20px;
+    background-color: var(--background-light);
+}
+
+.principal .contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-titles{
+    font-size: 40px;
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.principal p{
+    margin: 25px 80px;
+    display: flex;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 10px 20px;
+    color: var(--on-background-light);
+}
+
+.principal .tabla-inicio{
+    border-collapse: collapse;
+    font-size: 18px;
+    min-width: 400px;
+    width: 500px;
+    /* overflow: hidden; */
+    box-shadow: 0 0 20px rgb 0,0,0, 15;
+}
+.tabla-inicio thead{
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
+    text-align: left;
+    font-weight: bold;
+}
+.tabla-inicio th{
+    border-radius: 15px 15px 0 0;
+}
+.tabla-inicio .resalto{
+    color: var(--primary-light);
+    font-weight: bold;
+}
+.tabla-inicio th, td{
+    padding: 5px 12px;
+}
+.tabla-inicio tbody tr{
+    border-bottom: 1px solid var(--outline-light);
+    background-color: var(--surface-variant-light);
+}
+.tabla-inicio tbody tr:nth-of-type(even){
+    background-color: var(--tertiary-container-light);
+}
+.tabla-inicio tbody tr:last-of-type{
+    border-bottom: 2px solid var(--primary-light);
+}
+
+/* diseño funciones */
+.funciones{
+    padding: 70px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.funciones .nota{
+    border: 3px dashed var(--primary-light);
+    border-radius: 15px;
+    padding: 10px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: space-between;
+  }
+  .orderlista {
+    border-radius: 5px;
+    width: 600px;
+    padding: 10px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    cursor: default;
+  }
+  .orderlista li{
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    background-color: var(--secondary-container-light);
+    color: var(--on-secondary-container-light);
+    list-style-position: inside;
+    padding: 10px;
+    transition: .8s;
+  }
+  .orderlista li::marker{
+    color: var(--on-primary-container-light);
+    font-size: 1.5rem;
+  }
+  
+  .orderlista li:hover{
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
+    list-style-position: inside;
+    padding: 10px;
+  }
+  .deslista{
+    border-radius: 5px;
+    width: auto;
+    padding: 10px;
+    gap: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .deslista li{
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    background-color: var(--secondary-container-light);
+    color: var(--on-secondary-container-light);
+    list-style-position: inside;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: default;
+    transition: .5s;
+  }
+  .deslista li::marker{
+    color: var(--on-primary-container-light);
+    font-size: 1.5rem;
+  }
+  .deslista li:hover{
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    background-color: var(--primary-container-light);
+    color: var(--on-primary-container-light);
+    list-style-position: inside;
+    padding: 10px;
+    font-size: 2rem;
+  }
+
+  /* diseño presentacion personal mujer */
+
+
+
+
+
+
+
+
+
+
+/* responsive */
 @media (max-width: 600px){
     .nav-lateral{
         position: fixed;
